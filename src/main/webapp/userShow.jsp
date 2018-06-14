@@ -60,7 +60,7 @@
 </div>
 
 <div id="dlg" class="easyui-dialog"
-     style="width: 620px;height:250px;padding: 10px 20px" closed="true"
+     style="width: 620px;height:300px;padding: 10px 20px" closed="true"
      buttons="#dlg-buttons">
     <form id="fm" method="post">
         <table cellspacing="8px">
@@ -82,11 +82,12 @@
                 </td>
             </tr>
             <tr>
-                <td>性别：</td>
+               <td>性别：</td>
                 <td><input type="text" id="sex" name="sex"
                            class="easyui-validatebox" required="true"/>&nbsp;<font
                         color="red">*</font>
                 </td>
+
             </tr>
             <tr>
                 <td>地址：</td>
@@ -95,6 +96,7 @@
                         color="red">*</font>
                 </td>
             </tr>
+
         </table>
     </form>
 </div>
@@ -193,6 +195,17 @@
             $("#dlg").dialog("close");
             resetValue();
     }
+
+    function resetValue() {
+        $("#name").val("");
+        $("#id").val("");
+        $("#age").val("");
+        $("#sex").val("");
+        $("#addr").val("");
+
+    }
+
+
 
     /*添加user*/
     function openUserAddDialog(){
